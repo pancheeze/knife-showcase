@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col">
+        <div class="h1 text-center p-5 bg-dark text-light">Gallery</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="display-6">Pictures</div>
+      </div>
+    </div>
+
+    <div class="row" id="container-row">
+    </div>
+  </div>
+
+  <script>
+    var containerRow = document.getElementById("container-row");
+
+    var knifes = [
+    "Karambit",
+    "Shadowfang",
+    "Iron Serpent",
+    "Butterfly Knife",
+    "Night Reaver",
+    "Frostbite Dagger",
+    "Soulcleaver",
+    "Aether Edge",
+    "Obsidian Talon",
+    "Voidspike"
+];
+
+var pictures = [
+    "1.svg",
+    "2.svg",
+    "3.svg",
+    "4.svg",
+    "5.svg",
+    "6.svg",
+    "7.svg",
+    "8.svg",
+    "9.svg",
+    "10.svg"
+];
+
+var desc = [
+    "A small, curved utility knife originating from Southeast Asia, inspired by a tiger’s claw. It’s known for its ring handle and slashing-shaped blade.",
+    "A fictional or stylized knife name referring to a dark, stealth-oriented blade, often imagined as something sleek, silent, and deadly-looking.",
+    "A fantasy or concept knife named for its serpent-like shape or patterns, often imagined with a flowing, twisting design resembling a snake.",
+    "A folding knife with two handles that rotate around the blade, allowing it to be opened or closed in a visually dynamic way. Commonly used for skill tricks and flipping.",
+    "A dramatic, fictional knife name suggesting a blade designed for stealth, darkness, or a shadowy theme.",
+    "A fantasy-style dagger usually imagined with an icy appearance—cold colors, frost patterns, or a theme inspired by winter or freezing energy.",
+    "A heavy, intimidating fantasy blade name suggesting a knife infused with supernatural force or power.",
+    "A conceptual blade associated with energy, light, or magic—often imagined as glowing or infused with otherworldly power.",
+    "A knife inspired by volcanic obsidian and shaped like a claw. Usually depicted as sleek, glossy black, and extremely sharp-looking.",
+    "A fictional blade inspired by darkness or cosmic themes—often imagined as a thin, piercing blade with an otherworldly presence."
+];
+
+
+    for(var i = 0; i < knifes.length; i++){
+      containerRow.innerHTML += `
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card my-3 shadow-sm">
+            <img src="`+pictures[i]+`" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">` + knifes[i] + `</h5>
+              <p class="card-text">
+                `+desc[i]+`
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
