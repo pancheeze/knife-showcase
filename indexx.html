@@ -7,6 +7,7 @@
   <title>Bootstrap demo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ 
 </head>
 
 <body>
@@ -34,15 +35,15 @@
 
     var knifes = [
     "Karambit",
-    "Shadowfang",
-    "Iron Serpent",
-    "Butterfly Knife",
-    "Night Reaver",
-    "Frostbite Dagger",
-    "Soulcleaver",
-    "Aether Edge",
-    "Obsidian Talon",
-    "Voidspike"
+    "Balisong",
+    "Kukri",
+    "Bowie Knife",
+    "Tanto Knife",
+    "Stiletto",
+    "Cleaver",
+    "Kris",
+    "Machete",
+    "Puukko Knife"
 ];
 
 var pictures = [
@@ -59,24 +60,25 @@ var pictures = [
 ];
 
 var desc = [
-    "A small, curved utility knife originating from Southeast Asia, inspired by a tiger’s claw. It’s known for its ring handle and slashing-shaped blade.",
-    "A fictional or stylized knife name referring to a dark, stealth-oriented blade, often imagined as something sleek, silent, and deadly-looking.",
-    "A fantasy or concept knife named for its serpent-like shape or patterns, often imagined with a flowing, twisting design resembling a snake.",
-    "A folding knife with two handles that rotate around the blade, allowing it to be opened or closed in a visually dynamic way. Commonly used for skill tricks and flipping.",
-    "A dramatic, fictional knife name suggesting a blade designed for stealth, darkness, or a shadowy theme.",
-    "A fantasy-style dagger usually imagined with an icy appearance—cold colors, frost patterns, or a theme inspired by winter or freezing energy.",
-    "A heavy, intimidating fantasy blade name suggesting a knife infused with supernatural force or power.",
-    "A conceptual blade associated with energy, light, or magic—often imagined as glowing or infused with otherworldly power.",
-    "A knife inspired by volcanic obsidian and shaped like a claw. Usually depicted as sleek, glossy black, and extremely sharp-looking.",
-    "A fictional blade inspired by darkness or cosmic themes—often imagined as a thin, piercing blade with an otherworldly presence."
+    "A small, curved utility knife originating from Southeast Asia, inspired by a tiger’s claw. Known for its ring handle and hooked blade.",
+    "A folding knife with two handles that rotate around the blade, allowing it to be opened or closed with flipping techniques. Also known as a butterfly knife.",
+    "A Nepalese knife with a distinctive forward-curving blade. Known for its chopping power and iconic shape used by the Gurkhas.",
+    "A large fixed-blade knife with a clip point, famous for hunting and outdoor survival. Recognizable for its bold frontier-style design.",
+    "A knife with a strong, angled tip inspired by Japanese sword designs. Known for its piercing power and modern tactical appearance.",
+    "A slim, needle-pointed knife designed primarily for thrusting. Recognized for its long, sleek shape and elegant handle.",
+    "A heavy rectangular-bladed knife used mostly for chopping. Instantly recognizable by its large blocky silhouette.",
+    "A Southeast Asian blade known for its wavy, serpentine shape and cultural significance. Often seen with patterned steel and ornate handles.",
+    "A long, broad blade commonly used for clearing vegetation and heavy outdoor work. Simple but powerful in design.",
+    "A traditional Finnish knife with a simple wooden handle and a straight, clean blade. Known for its practicality and craftsmanship."
 ];
+
 
 
     for(var i = 0; i < knifes.length; i++){
       containerRow.innerHTML += `
-        <div class="col-6 col-md-4 col-lg-3">
-          <div class="card my-3 shadow-sm">
-            <img src="`+pictures[i]+`" class="card-img-top">
+        <div class="col-6 col-md-4 col-lg-3 ">
+          <div class="card my-3 shadow-sm w-100 ">
+            <img src="`+pictures[i]+`" class="card-img-top" alt="`+knifes[i]+`">
             <div class="card-body">
               <h5 class="card-title">` + knifes[i] + `</h5>
               <p class="card-text">
